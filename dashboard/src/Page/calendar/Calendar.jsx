@@ -22,12 +22,16 @@ const Courses = () => {
         title="Show All Courses"
         subTitle="List of courses and delete them"
       />
-     <div style={{ height: '80vh' }}>  {/* 'vh' stands for viewport height */} <DataGrid
-        slots={{ toolbar: GridToolbar }}
-        rows={rows}
-        getRowId={(row) => row.course_id}  // Use course_id as the unique row identifier
-        columns={columns(setRows)}  // Pass setRows to handle dynamic updates
-      /> </div>
+      <div style={{ height: "80vh" }}>
+        {" "}
+        {/* 'vh' stands for viewport height */}{" "}
+        <DataGrid
+          slots={{ toolbar: GridToolbar }}
+          rows={rows}
+          getRowId={(row) => row.course_id} // Use course_id as the unique row identifier
+          columns={columns(setRows)} // Pass setRows to handle dynamic updates
+        />{" "}
+      </div>
     </Box>
   );
 };
